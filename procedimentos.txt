@@ -1,0 +1,13 @@
+npm init -y cria o package json do projeto
+
+npm instala as receitas que são organizadas e listadas no package json
+ex: npm install normalize.css
+
+package json mostra os pacotes node instalados que estamos usando
+
+package json é como o glossário de um livro de receitas 
+e o node_modules contém todas as receitas
+
+quando iniciar um projeto e já tiver um package json pronto
+é só rodar 'npm install' que seráo instalados todos os pacotes listados
+
