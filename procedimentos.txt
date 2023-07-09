@@ -11,3 +11,42 @@ e o node_modules contém todas as receitas
 quando iniciar um projeto e já tiver um package json pronto
 é só rodar 'npm install' que seráo instalados todos os pacotes listados
 
+========================================
+
+INSTALAR WEBPACK
+
+npm install webpack webpack-cli --save-dev
+
+criar arquivo de configuração
+webpack.config.js
+o webpack vai procurar por este arquivo que contém instruções
+
+inserir o script dentro do package json que vai rodar o webpack "dev"
+"scripts": {
+    "dev": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+aí o webpack cria um diretório 'dist' com o js compilado 'main.js'
+
+>>> se quiser trocar a rota de onde os será a saída do arquivo.js final
+é só inserir a nova rota 'path' no webpack config
+
+=================================================
+PROCESSAR CSS
+
+instalar pacotes 
+-css-loader
+-style-loader 
+-postcss-loader
+--ver package.json
+
+configurar no webpack.config.js o módulo de carregamento css-loader
+quem vai carregar o css é o App.js
+
+=================================================
+
+BEM - estilo de organização do html/css
+B - Block elemento independente
+E - Element pertencente ao block, não pode ser usado fora do bloco que pertence
+M - Modifier usado para modificar o estado de um elemento Ex: show/hide
+
