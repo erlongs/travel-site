@@ -50,3 +50,38 @@ B - Block elemento independente
 E - Element pertencente ao block, não pode ser usado fora do bloco que pertence
 M - Modifier usado para modificar o estado de um elemento Ex: show/hide
 
+usar -- no meio da classe que dizer que é uma classe modificada
+ex: class="principal--modificação"
+
+=================================================
+
+devServer - servidor local que vai atualizar o navegador
+hot:(hot module replacement) permite webpack injetar css e js na memória do browser sem dar reload na página
+port: normalmente é a porta 8080, mas usaremos 3000
+
+instalar webpack-dev-server
+
+No package.json precisa atualizar o scripts com Serve:
+=>"dev": "webpack serve",
+
+No arquivo App.js é preciso autorizar o HOT para atualizar o navegador
+
+No no webpack.config.js elimina as linhas:
+=>liveReload: false
+=> watch: true, 
+e inclui a linha que vai dar o refresh no html. 
+=> watchFiles: ["app/**/*.html"],
+Inclui ainda:
+=> watch: false no static
+para não dar refresh no css e js
+
+******
+
+Rodar o Servidor Nos Devices Localmente
+
+precisa do ip localipconfig e IPv4 Address 192.168.X.X
+nos devices rodar: 192.168.X.X:3000
+
+******
+
+para css media query instalarnpm install postcss-mixins --save-dev
